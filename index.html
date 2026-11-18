@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperMarket POS - Sistema de Punto de Venta e Inventario</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Main Content: Catalog -->
+        <main class="catalog-section">
+            <header class="top-bar">
+                <div class="brand-container">
+                    <div class="brand-logo">
+                        <i class="ri-store-3-fill"></i>
+                    </div>
+                    <div class="brand-info">
+                        <h1 class="brand-title">SuperMarket POS</h1>
+                        <span id="systemStatusBadge" class="status-badge status-local" title="Modo de almacenamiento">
+                            <i class="ri-database-2-line"></i> <span id="statusBadgeText">Local</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="search-container">
+                    <i class="ri-search-line search-icon"></i>
+                    <input type="text" id="searchInput" placeholder="Buscar por nombre o código de barras...">
+                    <button id="clearSearchBtn" class="clear-search-btn" style="display:none;" title="Limpiar búsqueda">
+                        <i class="ri-close-line"></i>
+                    </button>
+                </div>
+
+                <div class="top-bar-actions">
+                    <button id="openAddProductBtn" class="btn btn-primary top-action-btn">
+                        <i class="ri-add-circle-fill"></i>
+                        <span>+ Añadir Producto</span>
+                    </button>
+                    <button id="openManageProductsBtn" class="btn btn-secondary top-action-btn">
+                        <i class="ri-list-settings-line"></i>
+                        <span>Gestionar Productos</span>
+                    </button>
+                </div>
+            </header>
+
+            <div class="categories-bar" id="categoriesContainer">
+                <button class="category-pill active" data-category="all">Todos</button>
+                <!-- Categories will be injected here -->
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be injected here -->
+            </div>
+        </main>
+
+        <!-- Sidebar: Cart -->
+        <aside class="cart-section">
+            <div class="cart-header">
+                <h2><i class="ri-shopping-cart-2-fill"></i> Carrito</h2>
+                <div class="barcode-container">
+                    <i class="ri-barcode-box-line"></i>
+                    <input type="text" id="barcodeInput" placeholder="Escanear Código (Enter)" autofocus>
+                </div>
+            </div>
+
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be injected here -->
+                <div class="empty-cart-message">
+                    <i class="ri-shopping-basket-line"></i>
+                    <p>Carrito vacío</p>
+                </div>
+            </div>
+
+            <div class="cart-footer">
+                <div class="cart-summary">
+                    <div class="summary-row">
+                        <span>Items</span>
+                        <span id="cartCount">0</span>
+                    </div>
+                    <div class="summary-row total-row">
+                        <span>Total</span>
+                        <span id="cartTotal">L. 0.00</span>
+                    </div>
+                </div>
+
+                <div class="cart-actions">
+                    <button id="checkoutBtn" class="btn btn-primary btn-block">
+                        <i class="ri-secured-plan-fill"></i> Realizar Venta
+                    </button>
+                    <div class="cart-btn-row">
+                        <button id="salesBtn" class="btn btn-secondary btn-half">
+                            <i class="ri-file-list-3-line"></i> Ventas
+                        </button>
+                        <button id="sidebarManageBtn" class="btn btn-secondary btn-half" title="Administrar catálogo de productos">
+                            <i class="ri-edit-box-line"></i> Catálogo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- MODAL 1: AÑADIR / EDITAR PRODUCTO (CRUD)   -->
+    <!-- ========================================== -->
+    <div id="productModal" class="modal">
+        <div class="modal-content modal-md">
+            <div class="modal-header">
+                <div class="modal-header-info">
+                    <h2 id="modalProductTitle"><i class="ri-add-box-line"></i> Añadir Nuevo Producto</h2>
+                    <p class="modal-header-desc">Completa los datos del producto y sube su fotografía</p>
+                </div>
+                <span class="close-modal" id="closeProductModal">&times;</span>
+            </div>
+
+            <form id="productForm" autocomplete="off">
+                <input type="hidden" id="formProductId">
+
+                <div class="form-row">
+                    <div class="form-group flex-2">
+                        <label for="formProdName" class="form-label">
+                            Nombre del Producto <span class="required">*</span>
+                        </label>
+                        <input type="text" id="formProdName" class="form-input" placeholder="Ej: Arroz Blanco 1 Libra" required>
+                    </div>
+
+                    <div class="form-group flex-1">
+                        <label for="formProdCode" class="form-label">
+                            Código / Barra <span class="required">*</span>
+                        </label>
+                        <div class="input-with-button">
+                            <input type="text" id="formProdCode" class="form-input" placeholder="Ej: 7421000..." required>
+                            <button type="button" id="btnGenCode" class="btn-icon-input" title="Generar código automático">
+                                <i class="ri-magic-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="formProdPrice" class="form-label">
+                            Precio (L.) <span class="required">*</span>
+                        </label>
+                        <div class="input-currency">
+                            <span class="currency-symbol">L.</span>
+                            <input type="number" id="formProdPrice" class="form-input" placeholder="0.00" step="0.01" min="0" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="formProdStock" class="form-label">Stock Actual</label>
+                        <input type="number" id="formProdStock" class="form-input" placeholder="100" min="0" value="100">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="formProdCategory" class="form-label">Categoría</label>
+                        <select id="formProdCategory" class="form-select">
+                            <!-- Populated dynamically -->
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Custom category input -->
+                <div class="form-group" id="customCategoryGroup" style="display:none;">
+                    <label for="formCustomCategory" class="form-label">Nombre de la Nueva Categoría</label>
+                    <input type="text" id="formCustomCategory" class="form-input" placeholder="Ej: Lácteos, Panadería, etc.">
+                </div>
+
+                <!-- Product Photo Upload Section -->
+                <div class="form-group">
+                    <label class="form-label flex-between">
+                        <span>Fotografía del Producto</span>
+                        <span class="label-hint">PNG, JPG, WEBP (Recomendado)</span>
+                    </label>
+
+                    <div class="photo-upload-box">
+                        <input type="file" id="formProdImageFile" accept="image/*" style="display:none;">
+
+                        <!-- Empty state / Dropzone -->
+                        <div class="dropzone" id="photoDropzone">
+                            <div class="dropzone-body" id="dropzoneEmpty">
+                                <div class="dropzone-icon">
+                                    <i class="ri-upload-cloud-2-line"></i>
+                                </div>
+                                <div class="dropzone-text">
+                                    <p class="dropzone-primary"><strong>Haz clic para subir</strong> o arrastra la foto aquí</p>
+                                    <p class="dropzone-secondary">La imagen se optimiza automáticamente para no ralentizar el sistema</p>
+                                </div>
+                            </div>
+
+                            <!-- Preview state -->
+                            <div class="dropzone-preview" id="dropzonePreview" style="display:none;">
+                                <div class="preview-img-wrapper">
+                                    <img id="previewImageTag" src="" alt="Vista previa de foto">
+                                </div>
+                                <div class="preview-details">
+                                    <span id="previewImageName" class="preview-filename">foto_producto.webp</span>
+                                    <div class="preview-actions">
+                                        <button type="button" class="btn btn-sm btn-danger" id="removePhotoBtn">
+                                            <i class="ri-delete-bin-line"></i> Quitar
+                                        </button>
+                                        <button type="button" class="btn btn-sm btn-secondary" id="changePhotoBtn">
+                                            <i class="ri-refresh-line"></i> Cambiar Foto
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Existing photo selector option -->
+                        <div class="existing-photo-accordion">
+                            <div class="existing-photo-toggle" id="toggleExistingPhotoSec">
+                                <i class="ri-folder-image-line"></i>
+                                <span>O seleccionar una foto existente de la carpeta <code>photo/</code></span>
+                                <i class="ri-arrow-down-s-line arrow-icon" id="existingPhotoArrow"></i>
+                            </div>
+                            <div class="existing-photo-content" id="existingPhotoContent" style="display:none;">
+                                <div class="existing-search-row">
+                                    <input type="text" id="existingPhotoFilter" class="form-input form-input-sm" placeholder="Buscar en carpeta photo/...">
+                                </div>
+                                <div class="existing-photos-grid" id="existingPhotosGrid">
+                                    <!-- Populated dynamically -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="cancelProductBtn">Cancelar</button>
+                    <button type="submit" class="btn btn-primary" id="saveProductBtn">
+                        <i class="ri-check-line"></i> <span id="saveBtnText">Guardar Producto</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- MODAL 2: GESTIÓN DE PRODUCTOS (CRUD TABLE) -->
+    <!-- ========================================== -->
+    <div id="manageProductsModal" class="modal">
+        <div class="modal-content modal-xl">
+            <div class="modal-header">
+                <div>
+                    <h2><i class="ri-database-2-line"></i> Gestión de Productos e Inventario</h2>
+                    <p class="modal-header-desc">Administra tu catálogo: añade, edita, cambia fotos o elimina productos</p>
+                </div>
+                <span class="close-modal" id="closeManageModal">&times;</span>
+            </div>
+
+            <!-- Toolbar -->
+            <div class="crud-toolbar">
+                <div class="crud-search-box">
+                    <i class="ri-search-line"></i>
+                    <input type="text" id="crudSearchInput" placeholder="Filtrar por nombre o código...">
+                </div>
+
+                <div class="crud-filter-box">
+                    <select id="crudCategoryFilter" class="form-select">
+                        <option value="all">Todas las Categorías</option>
+                    </select>
+                </div>
+
+                <div class="crud-toolbar-buttons">
+                    <button id="crudAddNewBtn" class="btn btn-primary">
+                        <i class="ri-add-line"></i> + Nuevo Producto
+                    </button>
+                    <button id="crudExportBtn" class="btn btn-secondary" title="Exportar productos a SQL o JSON">
+                        <i class="ri-download-2-line"></i> Exportar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="crud-stats-bar">
+                <div>
+                    Mostrando <strong id="crudFilteredCount">0</strong> de <strong id="crudTotalCount">0</strong> productos
+                </div>
+                <div id="crudServerSyncText" class="sync-indicator">
+                    <i class="ri-shield-check-line"></i> Sincronizado
+                </div>
+            </div>
+
+            <!-- Table Container -->
+            <div class="crud-table-wrap">
+                <table class="crud-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 75px; text-align: center;">Foto</th>
+                            <th style="width: 140px;">Código</th>
+                            <th>Nombre del Producto</th>
+                            <th style="width: 160px;">Categoría</th>
+                            <th style="width: 110px; text-align: right;">Precio</th>
+                            <th style="width: 80px; text-align: center;">Stock</th>
+                            <th style="width: 120px; text-align: center;">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="crudTableBody">
+                        <!-- Products rows injected here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- MODAL 3: CONFIRMAR ELIMINACIÓN            -->
+    <!-- ========================================== -->
+    <div id="deleteConfirmModal" class="modal">
+        <div class="modal-content modal-sm">
+            <div class="confirm-box">
+                <div class="confirm-icon danger">
+                    <i class="ri-delete-bin-2-line"></i>
+                </div>
+                <h3>¿Eliminar este producto?</h3>
+                <p>Estás a punto de eliminar permanentemente <strong id="deleteProdName"></strong> (Código: <span id="deleteProdCode"></span>).</p>
+                <div class="modal-footer confirm-footer">
+                    <button type="button" class="btn btn-secondary" id="cancelDeleteBtn">Cancelar</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteBtn">
+                        <i class="ri-delete-bin-line"></i> Sí, Eliminar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- MODAL 4: VENTAS DEL DÍA                   -->
+    <!-- ========================================== -->
+    <div id="salesModal" class="modal">
+        <div class="modal-content modal-md">
+            <div class="modal-header">
+                <h2><i class="ri-file-list-3-line"></i> Ventas del Día</h2>
+                <span class="close-modal" id="closeSalesModal">&times;</span>
+            </div>
+            <div class="sales-list" id="salesList">
+                <!-- Sales history -->
+            </div>
+            <div class="sales-footer">
+                <h3>Total Vendido: <span id="dailyTotal">L. 0.00</span></h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- MODAL 5: EXPORTAR PRODUCTOS                -->
+    <!-- ========================================== -->
+    <div id="exportModal" class="modal">
+        <div class="modal-content modal-sm">
+            <div class="modal-header">
+                <h2><i class="ri-download-2-line"></i> Exportar Productos</h2>
+                <span class="close-modal" id="closeExportModal">&times;</span>
+            </div>
+            <p class="export-desc">Elige el formato de exportación para tus productos:</p>
+            <div class="export-btn-group">
+                <button id="exportSqlBtn" class="btn btn-primary btn-block">
+                    <i class="ri-database-2-line"></i> Exportar SQL (PostgreSQL INSERT)
+                </button>
+                <button id="exportJsonBtn" class="btn btn-secondary btn-block">
+                    <i class="ri-file-code-line"></i> Exportar JSON (Copia Completa)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

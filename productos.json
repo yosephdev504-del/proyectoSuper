@@ -1,0 +1,1192 @@
+[
+  {
+    "id": 1,
+    "codigo": "8410077000070",
+    "nombre": "Aceite de Olivo Bote Pequeño",
+    "precio": 125,
+    "category": "Aceites y Grasas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 2,
+    "codigo": "279",
+    "nombre": "Aceite Mazola (400ml)",
+    "precio": 48,
+    "category": "Aceites y Grasas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 3,
+    "codigo": "7413100005074",
+    "nombre": "Aceite de Olivo en Bolsa",
+    "precio": 48,
+    "category": "Aceites y Grasas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 4,
+    "codigo": "1670",
+    "nombre": "Aceite Libra",
+    "precio": 22,
+    "category": "Aceites y Grasas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 5,
+    "codigo": "1128",
+    "nombre": "Aceite Wesson Canola",
+    "precio": 525,
+    "category": "Aceites y Grasas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 6,
+    "codigo": "803275305005",
+    "nombre": "Avena Molida",
+    "precio": 36,
+    "category": "Granos y Pastas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 7,
+    "codigo": "67",
+    "nombre": "Avena Mosch",
+    "precio": 32,
+    "category": "Granos y Pastas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 8,
+    "codigo": "020",
+    "nombre": "Azucar Morena",
+    "precio": 15,
+    "category": "Abarrotes",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 9,
+    "codigo": "1661",
+    "nombre": "Azucar El Cañal 2L",
+    "precio": 26,
+    "category": "Abarrotes",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 10,
+    "codigo": "68",
+    "nombre": "Cafe de Palo",
+    "precio": 120,
+    "category": "Abarrotes",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 11,
+    "codigo": "7891000300602",
+    "nombre": "Cafe Instantaneo",
+    "precio": 198,
+    "category": "Abarrotes",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 12,
+    "codigo": "65",
+    "nombre": "Cafe Oro Libra",
+    "precio": 9,
+    "category": "Abarrotes",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 13,
+    "codigo": "86",
+    "nombre": "Manteca Clover (Libra)",
+    "precio": 24,
+    "category": "Aceites y Grasas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 14,
+    "codigo": "90",
+    "nombre": "Manteca Clover (Quilo)",
+    "precio": 49,
+    "category": "Aceites y Grasas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 15,
+    "codigo": "680",
+    "nombre": "Espagueti Mi Pasta",
+    "precio": 9,
+    "category": "Granos y Pastas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 16,
+    "codigo": "7441000714147",
+    "nombre": "Maseca para Pastelitos",
+    "precio": 22,
+    "category": "Granos y Pastas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 17,
+    "codigo": "7401004220617",
+    "nombre": "Mayonesa Doypack",
+    "precio": 55,
+    "category": "Salsas y Aderezos",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 18,
+    "codigo": "7411000329702",
+    "nombre": "Salsa Naturas",
+    "precio": 48,
+    "category": "Salsas y Aderezos",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 19,
+    "codigo": "76",
+    "nombre": "Sopa Maggi Pollo",
+    "precio": 15,
+    "category": "Granos y Pastas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 20,
+    "codigo": "7420000410402",
+    "nombre": "Vinagre Rico",
+    "precio": 40,
+    "category": "Salsas y Aderezos",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 21,
+    "codigo": "4",
+    "nombre": "Carne de Res (Tajo Libra)",
+    "precio": 95,
+    "category": "Carnes y Embutidos",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 22,
+    "codigo": "5",
+    "nombre": "Carne Molida de Res",
+    "precio": 88,
+    "category": "Carnes y Embutidos",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 23,
+    "codigo": "9",
+    "nombre": "Chuleta de Cerdo",
+    "precio": 49,
+    "category": "Carnes y Embutidos",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 24,
+    "codigo": "13",
+    "nombre": "Costilla de Cerdo",
+    "precio": 49,
+    "category": "Carnes y Embutidos",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 25,
+    "codigo": "18",
+    "nombre": "Pollo Mixto (Libra)",
+    "precio": 28,
+    "category": "Carnes y Embutidos",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 26,
+    "codigo": "17",
+    "nombre": "Alitas de Pollo",
+    "precio": 62,
+    "category": "Carnes y Embutidos",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 27,
+    "codigo": "7421000904168",
+    "nombre": "Chorizo Barbacoa Delicia",
+    "precio": 65,
+    "category": "Carnes y Embutidos",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 28,
+    "codigo": "328",
+    "nombre": "Jamon Bavaria",
+    "precio": 32,
+    "category": "Carnes y Embutidos",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 29,
+    "codigo": "7424101100569",
+    "nombre": "Hot Dog Pollo",
+    "precio": 65,
+    "category": "Carnes y Embutidos",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 30,
+    "codigo": "1820",
+    "nombre": "Mortadela Europea",
+    "precio": 33,
+    "category": "Carnes y Embutidos",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 31,
+    "codigo": "233",
+    "nombre": "Pasta Colgate Grande",
+    "precio": 52,
+    "category": "Higiene y Limpieza",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 32,
+    "codigo": "637",
+    "nombre": "Jabon Palmolive",
+    "precio": 22,
+    "category": "Higiene y Limpieza",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 33,
+    "codigo": "02",
+    "nombre": "Papel Higienico Scott (4 rollos)",
+    "precio": 80,
+    "category": "Higiene y Limpieza",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 34,
+    "codigo": "1838",
+    "nombre": "Detergente en Libra",
+    "precio": 15,
+    "category": "Higiene y Limpieza",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 35,
+    "codigo": "223",
+    "nombre": "Suavitel (800ml)",
+    "precio": 68,
+    "category": "Higiene y Limpieza",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 36,
+    "codigo": "227",
+    "nombre": "Cloro Magia Blanca",
+    "precio": 6,
+    "category": "Higiene y Limpieza",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": null
+  },
+  {
+    "id": 37,
+    "codigo": "7422110100556",
+    "nombre": "Coca Cola 3 Litros",
+    "precio": 68,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "COCACOLA_3_LITROS.webp"
+  },
+  {
+    "id": 38,
+    "codigo": "409",
+    "nombre": "Coca Cola 1.1L",
+    "precio": 35,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "COCACOLA_1.1_LITROS.webp"
+  },
+  {
+    "id": 39,
+    "codigo": "7421600303835",
+    "nombre": "Adrenalina Rush",
+    "precio": 35,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "ADRENALINA_RUSH.webp"
+  },
+  {
+    "id": 40,
+    "codigo": "09",
+    "nombre": "Jugo de Naranja Leyde",
+    "precio": 17,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "JUGO_LEYDE_NARANJA_473ML.webp"
+  },
+  {
+    "id": 41,
+    "codigo": "7421600308700",
+    "nombre": "Agua Azul 500ml",
+    "precio": 15,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "BOTE_AGUA_AZUL_500ML.webp"
+  },
+  {
+    "id": 42,
+    "codigo": "2015",
+    "nombre": "Papas (Libra)",
+    "precio": 20,
+    "category": "Verduras",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "PAPAS_LIBRA.webp"
+  },
+  {
+    "id": 43,
+    "codigo": "1792",
+    "nombre": "Cebolla Blanca",
+    "precio": 22,
+    "category": "Verduras",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "CEBOLLA_BLANCA.webp"
+  },
+  {
+    "id": 44,
+    "codigo": "1822",
+    "nombre": "Tomates",
+    "precio": 25,
+    "category": "Verduras",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "TOMATES.webp"
+  },
+  {
+    "id": 45,
+    "codigo": "11163",
+    "nombre": "Platano Maduro",
+    "precio": 10,
+    "category": "Verduras",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "PLATANO_MADURO.webp"
+  },
+  {
+    "id": 46,
+    "codigo": "1895",
+    "nombre": "Chile Dulce",
+    "precio": 12,
+    "category": "Verduras",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "CHILE_DULCE.webp"
+  },
+  {
+    "id": 47,
+    "codigo": "1177",
+    "nombre": "Achote",
+    "precio": 5,
+    "category": "Verduras",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "ACHOTE.webp"
+  },
+  {
+    "id": 48,
+    "codigo": "1898",
+    "nombre": "Aguacates",
+    "precio": 20,
+    "category": "Verduras",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "AGUACATE.webp"
+  },
+  {
+    "id": 49,
+    "codigo": "413",
+    "nombre": "Ajos Frescos",
+    "precio": 5,
+    "category": "Verduras",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "AJO.webp"
+  },
+  {
+    "id": 50,
+    "codigo": "2507",
+    "nombre": "Apio",
+    "precio": 3,
+    "category": "Verduras",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "APIO.webp"
+  },
+  {
+    "id": 51,
+    "codigo": "1176",
+    "nombre": "Cebolla Roja",
+    "precio": 25,
+    "category": "Verduras",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "CEBOLLA_ROJA.webp"
+  },
+  {
+    "id": 52,
+    "codigo": "2505",
+    "nombre": "Culantro Ancho",
+    "precio": 7,
+    "category": "Verduras",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "CULANTRO_ANCHO.webp"
+  },
+  {
+    "id": 53,
+    "codigo": "2506",
+    "nombre": "Culantro Fino",
+    "precio": 16,
+    "category": "Verduras",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "CULANTRO_FINO.webp"
+  },
+  {
+    "id": 54,
+    "codigo": "1891",
+    "nombre": "Guineos Verdes",
+    "precio": 2.5,
+    "category": "Verduras",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "GUINEOS_VERDES.webp"
+  },
+  {
+    "id": 55,
+    "codigo": "5561",
+    "nombre": "Jalapeño Entero",
+    "precio": 22,
+    "category": "Verduras",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "JALAPEÑO_ENTERO.webp"
+  },
+  {
+    "id": 56,
+    "codigo": "00011",
+    "nombre": "Limon por Unidad",
+    "precio": 3,
+    "category": "Verduras",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "LIMON.webp"
+  },
+  {
+    "id": 57,
+    "codigo": "2059",
+    "nombre": "Patastes",
+    "precio": 18,
+    "category": "Verduras",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "PATASTE.webp"
+  },
+  {
+    "id": 58,
+    "codigo": "2001",
+    "nombre": "Pepino",
+    "precio": 12,
+    "category": "Verduras",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "PEPINO.webp"
+  },
+  {
+    "id": 59,
+    "codigo": "639",
+    "nombre": "Platano Verde",
+    "precio": 10,
+    "category": "Verduras",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "PLATANO_VERDE.webp"
+  },
+  {
+    "id": 60,
+    "codigo": "2000",
+    "nombre": "Repollo",
+    "precio": 12,
+    "category": "Verduras",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "REPOLLO.webp"
+  },
+  {
+    "id": 61,
+    "codigo": "832123",
+    "nombre": "Zanahoria",
+    "precio": 18,
+    "category": "Verduras",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "ZANAHORIA.webp"
+  },
+  {
+    "id": 67,
+    "codigo": "7421600303828",
+    "nombre": "ADRENALINA RUSH GRANDE",
+    "precio": 50,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "ADRENALINA_RUSH_GRANDE.webp"
+  },
+  {
+    "id": 68,
+    "codigo": "611594000033",
+    "nombre": "AGUA DE LITRO",
+    "precio": 25,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "Agua_Azul_Litro_750ML.webp"
+  },
+  {
+    "id": 69,
+    "codigo": "7422540016564",
+    "nombre": "ALOE VERA LEYDE",
+    "precio": 35,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "ALOE_VERA_LEYDE.webp"
+  },
+  {
+    "id": 70,
+    "codigo": "8",
+    "nombre": "AMP ENERGY",
+    "precio": 25,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "AMP_ENERGY.webp"
+  },
+  {
+    "id": 71,
+    "codigo": "1348",
+    "nombre": "BANANA 2L",
+    "precio": 58,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "BANANA_2L.webp"
+  },
+  {
+    "id": 72,
+    "codigo": "7422110100570",
+    "nombre": "BANANA 3L",
+    "precio": 68,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "BANANA_3L.webp"
+  },
+  {
+    "id": 73,
+    "codigo": "1179",
+    "nombre": "BANANA TROPICAL RETORNABLE",
+    "precio": 15,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "BANANA_TROPICAL_RETORNABLE.webp"
+  },
+  {
+    "id": 74,
+    "codigo": "655656",
+    "nombre": "BOTE DE AGUA 2 LITROS",
+    "precio": 28,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "BOTE_DE_AGUA_L2.webp"
+  },
+  {
+    "id": 75,
+    "codigo": "408",
+    "nombre": "BOTE DE AGUA AZUL 750ML",
+    "precio": 20,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "BOTE_DE_AGUA_AZUL_750ML.webp"
+  },
+  {
+    "id": 76,
+    "codigo": "407",
+    "nombre": "BOTELLA DE AGUA PEQUEÑA",
+    "precio": 10,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "BOTELLA_DE_AGUA_PEQUENA.webp"
+  },
+  {
+    "id": 77,
+    "codigo": "08",
+    "nombre": "CANADA DRY LATA",
+    "precio": 25,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "CANADA_DRY_LATA.webp"
+  },
+  {
+    "id": 78,
+    "codigo": "0016",
+    "nombre": "CANADADRY PERSONAL",
+    "precio": 25,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "CANADADRY_PERSONAL.webp"
+  },
+  {
+    "id": 79,
+    "codigo": "7445072002942",
+    "nombre": "CIFRUT DE NARANJA",
+    "precio": 16,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "CIFRUT_DE_NARANJA.webp"
+  },
+  {
+    "id": 80,
+    "codigo": "409",
+    "nombre": "COCACOLA 1.1",
+    "precio": 35,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "COCACOLA_1.1_LITROS.webp"
+  },
+  {
+    "id": 81,
+    "codigo": "402",
+    "nombre": "COCACOLA 1.5 LITROS",
+    "precio": 40,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "COCACOLA_1.5_LITROS.webp"
+  },
+  {
+    "id": 82,
+    "codigo": "1180",
+    "nombre": "COCACOLA 2LTS",
+    "precio": 60,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "COCACOLA_2L.webp"
+  },
+  {
+    "id": 83,
+    "codigo": "7411001800231",
+    "nombre": "COCACOLA 354ML",
+    "precio": 25,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "COCACOLA_354ML.webp"
+  },
+  {
+    "id": 84,
+    "codigo": "401",
+    "nombre": "COCACOLA PERSONAL",
+    "precio": 25,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "COCACOLA_PERSONAL.webp"
+  },
+  {
+    "id": 85,
+    "codigo": "1178",
+    "nombre": "COCACOLA RETORNABLE",
+    "precio": 15,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "COCACOLA_RETORNABLE.webp"
+  },
+  {
+    "id": 86,
+    "codigo": "1350",
+    "nombre": "FRESCA 2L",
+    "precio": 58,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "FRESCA_2L.webp"
+  },
+  {
+    "id": 87,
+    "codigo": "7422110105582",
+    "nombre": "FRESCA 3 LITROS",
+    "precio": 68,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "FRESCA_3_LITROS.webp"
+  },
+  {
+    "id": 88,
+    "codigo": "07",
+    "nombre": "FRESCA 500ML",
+    "precio": 25,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "FRESCA_500ML.webp"
+  },
+  {
+    "id": 89,
+    "codigo": "1784",
+    "nombre": "FRUVITA MELOCOTON",
+    "precio": 8,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "FRUVITA_MELOCOTON.webp"
+  },
+  {
+    "id": 90,
+    "codigo": "1164",
+    "nombre": "FURY",
+    "precio": 25,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "FURY.webp"
+  },
+  {
+    "id": 91,
+    "codigo": "656",
+    "nombre": "GATORADE 20 OZ UVA",
+    "precio": 38,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "GATORADE_UVA.webp"
+  },
+  {
+    "id": 92,
+    "codigo": "1791",
+    "nombre": "GATORADE DE MELON",
+    "precio": 35,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "GATORADE_MELON.webp"
+  },
+  {
+    "id": 93,
+    "codigo": "1817",
+    "nombre": "GATORADE FRESA",
+    "precio": 35,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "GATORADE_FRESA.webp"
+  },
+  {
+    "id": 94,
+    "codigo": "280",
+    "nombre": "GRAN BERRY DEL MONTE ARANDANO",
+    "precio": 50,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "GRAN_BERRY_DEL_MONTE_ARANDANO.webp"
+  },
+  {
+    "id": 95,
+    "codigo": "01",
+    "nombre": "JUGO DE NARANJA AGRIA LEYDE",
+    "precio": 25,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "JUGO_DE_NARANJA_AGRIA_LEYDE.webp"
+  },
+  {
+    "id": 96,
+    "codigo": "781",
+    "nombre": "JUGO DE NARANJA CON ZANAHORIA LEYDE",
+    "precio": 25,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "JUGO_NARANJA_CON_ZANAHORIA_LEYDE.webp"
+  },
+  {
+    "id": 97,
+    "codigo": "406",
+    "nombre": "JUGO DE NARANJA LEIDY LITRO",
+    "precio": 34,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "JUGO_DE_NARANJA_LEIDY_LITRO.webp"
+  },
+  {
+    "id": 98,
+    "codigo": "7421000851974",
+    "nombre": "JUGO FRISTY DE NARANJA",
+    "precio": 55,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "JUGO_FRISTY_DE_NARANJA.webp"
+  },
+  {
+    "id": 99,
+    "codigo": "7421000841036",
+    "nombre": "JUGO FRISTY MEDIO GALON VERDE",
+    "precio": 34,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "JUGO_FRISTY_MEDIO_GALON_VERDE.webp"
+  },
+  {
+    "id": 100,
+    "codigo": "7421000841029",
+    "nombre": "JUGO FRISTY MIX DE FRUTA",
+    "precio": 50,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "JUGO FRISTY MIX DE FRUTA.webp"
+  },
+  {
+    "id": 101,
+    "codigo": "09",
+    "nombre": "JUGO LEYDE NARANJA 473 ML",
+    "precio": 17,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "JUGO_LEYDE_NARANJA_473_ML.webp"
+  },
+  {
+    "id": 102,
+    "codigo": "7422540018766",
+    "nombre": "LIMONADA ROSA LEYDE",
+    "precio": 25,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "LIMONADA_ROSA_LEYDE.webp"
+  },
+  {
+    "id": 103,
+    "codigo": "0011",
+    "nombre": "MARINERO PICANTE",
+    "precio": 16,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "MARINERO_PICANTE.webp"
+  },
+  {
+    "id": 104,
+    "codigo": "1352",
+    "nombre": "MARINERO SIN PICAR",
+    "precio": 16,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "MARINERO_SIN_PICAR.webp"
+  },
+  {
+    "id": 105,
+    "codigo": "400",
+    "nombre": "MIRINDA DE UVA",
+    "precio": 25,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "MIRINDA_DE_UVA.webp"
+  },
+  {
+    "id": 106,
+    "codigo": "081537200750",
+    "nombre": "NATURAS DE PERA",
+    "precio": 15,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "NATURAS_DE_PERA.webp"
+  },
+  {
+    "id": 107,
+    "codigo": "1347",
+    "nombre": "NATURAS MANZANA",
+    "precio": 16,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "NATURAS_MANZANA.webp"
+  },
+  {
+    "id": 108,
+    "codigo": "0010",
+    "nombre": "NATURAS MELOCOTON 330ML",
+    "precio": 15,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "NATURAS_MELOCOTON.webp"
+  },
+  {
+    "id": 109,
+    "codigo": "404",
+    "nombre": "PEPSI 3 LITROS",
+    "precio": 70,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "PEPSI_3_LITROS.webp"
+  },
+  {
+    "id": 110,
+    "codigo": "11346",
+    "nombre": "PEPSI PERSONAL",
+    "precio": 25,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "PEPSI_PERSONAL.webp"
+  },
+  {
+    "id": 111,
+    "codigo": "081537200743",
+    "nombre": "PIÑA NATURAS",
+    "precio": 15,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "PINA_NATURAS.webp"
+  },
+  {
+    "id": 112,
+    "codigo": "999",
+    "nombre": "RETORNABLE PEPSI 354 ML",
+    "precio": 15,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "RETORNABLE_PEPSI_354_ML.webp"
+  },
+  {
+    "id": 113,
+    "codigo": "784562012502",
+    "nombre": "SPRITE 2 LITROS",
+    "precio": 58,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "SPRITE_2_LITROS.webp"
+  },
+  {
+    "id": 114,
+    "codigo": "784562012359",
+    "nombre": "SPRITE 500ML",
+    "precio": 25,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "SPRITE_500ML.webp"
+  },
+  {
+    "id": 115,
+    "codigo": "7422540018728",
+    "nombre": "TE FRIO LEYDE",
+    "precio": 25,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "TE_FRIO_LEYDE.webp"
+  },
+  {
+    "id": 116,
+    "codigo": "06",
+    "nombre": "TROPICAL BANANA 500ML",
+    "precio": 25,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "TROPICAL_BANANA_500ML.webp"
+  },
+  {
+    "id": 117,
+    "codigo": "7422110107098",
+    "nombre": "TROPICAL NARANJA",
+    "precio": 25,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "TROPICAL_NARANJA.webp"
+  },
+  {
+    "id": 118,
+    "codigo": "7422110107135",
+    "nombre": "TROPICAL NARANJA 2L",
+    "precio": 58,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "TROPICAL_NARANJA_2L.webp"
+  },
+  {
+    "id": 119,
+    "codigo": "784562014353",
+    "nombre": "TROPICAL UVA PERSONAL",
+    "precio": 25,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "TROPICAL_UVA_PERSONAL.webp"
+  },
+  {
+    "id": 120,
+    "codigo": "7422110100938",
+    "nombre": "UVA TROPICAL 3LITROS",
+    "precio": 68,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "UVA_TROPICAL_3LITROS.webp"
+  },
+  {
+    "id": 121,
+    "codigo": "1783",
+    "nombre": "UVA TROPICAL 2L",
+    "precio": 58,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "UVA_TROPICAL_2L.webp"
+  },
+  {
+    "id": 122,
+    "codigo": "7445072001501",
+    "nombre": "VOLT ENERGY",
+    "precio": 16,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "VOLT_ENERGY.webp"
+  },
+  {
+    "id": 123,
+    "codigo": "05",
+    "nombre": "WELCHS UVA ROJA",
+    "precio": 100,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "WELCHS_UVA_ROJA.webp"
+  },
+  {
+    "id": 124,
+    "codigo": "661",
+    "nombre": "WELCHS VINO VERDE",
+    "precio": 100,
+    "category": "Bebidas",
+    "stock_actual": 100,
+    "stock_minimo": 10,
+    "imagen": "WELCHS_VINO_VERDE.webp"
+  }
+]

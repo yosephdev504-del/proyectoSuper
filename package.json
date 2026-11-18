@@ -1,0 +1,20 @@
+{
+  "name": "supermarket-pos",
+  "version": "1.0.0",
+  "description": "Sistema Profesional de Punto de Venta (POS) y Gestión de Inventario para Supermercados, Abarroterías y Minimarkets",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "pos",
+    "supermarket",
+    "abarroteria",
+    "inventario",
+    "crud",
+    "point-of-sale"
+  ],
+  "author": "SuperMarket POS",
+  "license": "ISC"
+}

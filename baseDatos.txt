@@ -1,0 +1,129 @@
+-- Database: supermarket_pos
+
+-- DROP DATABASE IF EXISTS "supermarket_pos";
+
+CREATE DATABASE "supermarket_pos"
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'Spanish_Honduras.1252'
+    LC_CTYPE = 'Spanish_Honduras.1252'
+    LOCALE_PROVIDER = 'libc'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1
+    IS_TEMPLATE = False;
+
+2
+
+-- 1. Crear Tabla de Productos
+CREATE TABLE IF NOT EXISTS productos (
+    id SERIAL PRIMARY KEY,
+    codigo VARCHAR(50) UNIQUE NOT NULL, -- Código de barras o ID del PDF
+    nombre VARCHAR(255) NOT NULL,
+    precio DECIMAL(10, 2) NOT NULL,
+    stock_actual INT DEFAULT 100,       -- Iniciamos con 100 como pediste
+    stock_minimo INT DEFAULT 10         -- Alerta cuando baje de 10
+);
+
+-- 2. Crear Tabla de Ventas (Cabecera)
+CREATE TABLE IF NOT EXISTS ventas (
+    id SERIAL PRIMARY KEY,
+    fecha_venta TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    total DECIMAL(10, 2) DEFAULT 0
+);
+
+-- 3. Crear Tabla de Detalle de Venta (Items individuales)
+CREATE TABLE IF NOT EXISTS detalle_ventas (
+    id SERIAL PRIMARY KEY,
+    venta_id INT REFERENCES ventas(id),
+    producto_id INT REFERENCES productos(id),
+    cantidad INT NOT NULL,
+    precio_unitario DECIMAL(10, 2) NOT NULL,
+    subtotal DECIMAL(10, 2) GENERATED ALWAYS AS (cantidad * precio_unitario) STORED
+);
+
+-- 4. Índice para búsquedas rápidas por código de barras
+CREATE INDEX idx_codigo_producto ON productos(codigo);
+
+
+3
+
+-- Insertar productos con Stock inicial de 100
+INSERT INTO productos (nombre, codigo, precio, stock_actual) VALUES
+-- ABARROTES
+('Aceite de Olivo Bote Pequeño', '8410077000070', 125.00, 100),
+('Aceite Mazola (400ml)', '279', 48.00, 100),
+('Aceite de Olivo en Bolsa', '7413100005074', 48.00, 100),
+('Aceite Libra', '1670', 22.00, 100),
+('Aceite Wesson Canola', '1128', 525.00, 100),
+('Avena Molida', '803275305005', 36.00, 100),
+('Avena Mosch', '67', 32.00, 100),
+('Azucar Morena', '020', 15.00, 100),
+('Azucar El Cañal 2L', '1661', 26.00, 100),
+('Cafe de Palo', '68', 120.00, 100),
+('Cafe Instantaneo', '7891000300602', 198.00, 100),
+('Cafe Oro Libra', '65', 9.00, 100),
+('Manteca Clover (Libra)', '86', 24.00, 100),
+('Manteca Clover (Quilo)', '90', 49.00, 100),
+('Espagueti Mi Pasta', '680', 9.00, 100),
+('Maseca para Pastelitos', '7441000714147', 22.00, 100),
+('Mayonesa Doypack', '7401004220617', 55.00, 100),
+('Salsa Naturas', '7411000329702', 48.00, 100),
+('Sopa Maggi Pollo', '76', 15.00, 100),
+('Vinagre Rico', '7420000410402', 40.00, 100),
+
+-- CARNES Y EMBUTIDOS
+('Carne de Res (Tajo Libra)', '4', 95.00, 100),
+('Carne Molida de Res', '5', 88.00, 100),
+('Chuleta de Cerdo', '9', 49.00, 100),
+('Costilla de Cerdo', '13', 49.00, 100),
+('Pollo Mixto (Libra)', '18', 28.00, 100),
+('Alitas de Pollo', '17', 62.00, 100),
+('Chorizo Barbacoa Delicia', '7421000904168', 65.00, 100),
+('Jamon Bavaria', '328', 32.00, 100),
+('Hot Dog Pollo', '7424101100569', 65.00, 100),
+('Mortadela Europea', '1820', 33.00, 100),
+
+-- HIGIENE Y HOGAR
+('Pasta Colgate Grande', '233', 52.00, 100),
+('Jabon Palmolive', '637', 22.00, 100),
+('Papel Higienico Scott (4 rollos)', '02', 80.00, 100),
+('Detergente en Libra', '1838', 15.00, 100),
+('Suavitel (800ml)', '223', 68.00, 100),
+('Cloro Magia Blanca', '227', 6.00, 100),
+
+-- BEBIDAS Y REFRESCOS
+('Coca Cola 3 Litros', '7422110100556', 68.00, 100),
+('Coca Cola 1.1L', '409', 35.00, 100),
+('Adrenalina Rush', '7421600303835', 35.00, 100),
+('Jugo de Naranja Leyde', '09', 17.00, 100),
+('Agua Azul 500ml', '7421600308700', 15.00, 100),
+
+-- VERDURAS
+('Papas (Libra)', '2015', 20.00, 100),
+('Cebolla Blanca', '1792', 22.00, 100),
+('Tomates', '1822', 25.00, 100),
+('Platano Maduro', '11163', 10.00, 100),
+('Chile Dulce', '1895', 12.00, 100)
+
+ON CONFLICT (codigo) DO UPDATE 
+SET stock_actual = 100; -- Si el código ya existe, resetea el stock a 100
+
+
+
+4 provar que todo este bien\
+
+-- Ver todos los productos ordenados por nombre
+SELECT * FROM productos ORDER BY nombre ASC;
+
+-- Ver cuántos productos hay en total (debería coincidir con lo que insertamos)
+SELECT COUNT(*) AS total_articulos_registrados FROM productos;
+
+
+
+
+
+
+
+
+
